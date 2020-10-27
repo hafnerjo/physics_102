@@ -27,6 +27,9 @@ y = m*x + b
 
 plt.plot(x, y, 'g--')
 
+# Asymptotes
+plt.axhline(y=b, linestyle='--', color='g')
+
 # Removed an outlier to plot as a separate color.
 # When you get something like this is worth throwing it out to check
 # what kind of impact it has.
