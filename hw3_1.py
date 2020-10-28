@@ -11,9 +11,12 @@ import matplotlib.pyplot as plt
 r = 11.0
 v = 15
 
-resistors = np.linspace(0, 500, 200)
+R = np.linspace(0, 200, 200)
+current = v / (r + R)
+power = current**2 * R
 
-power = v**2 / (r + resistors)
+# Plot the calculated value for R='r' that appears to be the max
+plt.axvline(x=r, linestyle='--', color='g')
 
-plt.plot(resistors, power, 'b-')
+plt.plot(R, power, 'b-')
 plt.show()
